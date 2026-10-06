@@ -1,0 +1,28 @@
+{
+  "name": "railway-producer-consumer",
+  "version": "1.0.0",
+  "description": "Railway Reservation, Cancellation and Waiting-List Processing using the Producer-Consumer Synchronization Model (worker_threads + SharedArrayBuffer + Atomics)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n srv,web -c blue,magenta \"node server/src/index.js\" \"vite client\"",
+    "start": "node server/src/index.js",
+    "build": "vite build client",
+    "test": "node --test \"server/tests/*.test.js\"",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.4.49",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.7"
+  }
+}
